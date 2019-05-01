@@ -53,10 +53,10 @@ matrix:
 
 
   # Fails. We did nor find a good way to install qt and start a developer command prompt yet.
-  # - os: windows
-  #   language: cpp
-  #   before_install:
-  #    - choco install -y qtcreator
+  - os: windows
+    language: cpp
+    before_install:
+     - choco install -y qt-sdk
 
-  #   script:
-  #     - tools/release_fritzing.bat 0.9.4b 64 2017
+    script:
+      - tools/release_fritzing.bat 0.9.4b 64 2017
