@@ -5,6 +5,8 @@ function Controller() {
   })
 }
 
+gui.clickButton(buttons.NextButton, 3000);
+
 Controller.prototype.WelcomePageCallback = function() {
   gui.clickButton(buttons.NextButton);
 }
@@ -18,7 +20,7 @@ Controller.prototype.IntroductionPageCallback = function() {
 }
 
 Controller.prototype.TargetDirectoryPageCallback = function() {
-  gui.currentPageWidget().TargetDirectoryLineEdit.setText("C:/Qt/Qt5.5.1");
+  gui.currentPageWidget().TargetDirectoryLineEdit.setText("C:/Qt/Qt5.9.8");
   gui.clickButton(buttons.NextButton);
 }
 
@@ -26,7 +28,7 @@ Controller.prototype.ComponentSelectionPageCallback = function() {
   var widget = gui.currentPageWidget();
 
   widget.deselectAll();
-  widget.selectComponent("qt.55.win64_msvc2013_64");
+  widget.selectComponent("qt.qt5.598.win64_msvc2017_64");
   // widget.selectComponent("qt.55.qt3d");
   // widget.selectComponent("qt.55.qtcanvas3d");
   // widget.selectComponent("qt.55.qtquick1");
