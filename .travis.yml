@@ -55,7 +55,7 @@ matrix:
   - os: windows
     language: cpp
     before_install:
-     - curl http://download.qt-project.org/official_releases/online_installers/qt-unified-windows-x86-online.exe
+     - curl -L http://download.qt-project.org/official_releases/online_installers/qt-unified-windows-x86-online.exe
      - ./qt-unified-windows-x86-online.exe --script ./tools/qt-installer-noninteractive.qs
      - rm qt-unified-windows-x86-online.exe
 
