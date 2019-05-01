@@ -55,9 +55,11 @@ matrix:
   - os: windows
     language: cpp
     before_install:
+      - pwd
+      - ls -lah "C:/"
       - curl -L http://download.qt-project.org/official_releases/online_installers/qt-unified-windows-x86-online.exe --output qt-installer.exe
-      - ls -lah
       - ./qt-installer.exe --script ./tools/qt_installer_noninteractive.qs
+      - ls -lah "C:/Qt/"
 
     script:
       - tools/release_fritzing.bat 0.9.4b 64 2017
