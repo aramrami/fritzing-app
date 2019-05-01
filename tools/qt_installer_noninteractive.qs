@@ -1,3 +1,6 @@
+// Script for automating the Qt install on Windows
+// Guide: https://doc.qt.io/qtinstallerframework/noninteractive.html
+
 function Controller() {
   installer.autoRejectMessageBoxes();
   installer.installationFinished.connect(function() {
@@ -34,13 +37,7 @@ Controller.prototype.ComponentSelectionPageCallback = function() {
 // Cannot get older version of Qt qit Quick Scripts
 // Cannot programatically select LTS releases
 //  widget.selectComponent("qt.qt5.598.win64_msvc2017_64");
-  // widget.selectComponent("qt.55.qt3d");
-  // widget.selectComponent("qt.55.qtcanvas3d");
-  // widget.selectComponent("qt.55.qtquick1");
-  // widget.selectComponent("qt.55.qtscript");
-  // widget.selectComponent("qt.55.qtwebengine");
-  // widget.selectComponent("qt.55.qtquickcontrols");
-  // widget.selectComponent("qt.55.qtlocation");
+// Selecting invalid components results in installing just QtCreator.
 
   gui.clickButton(buttons.NextButton);
 }
