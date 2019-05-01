@@ -20,7 +20,7 @@ Controller.prototype.IntroductionPageCallback = function() {
 }
 
 Controller.prototype.TargetDirectoryPageCallback = function() {
-  gui.currentPageWidget().TargetDirectoryLineEdit.setText("C:/Qt/Qt5.9.8");
+  gui.currentPageWidget().TargetDirectoryLineEdit.setText("C:/Qt/Qt5.12.3");
   gui.clickButton(buttons.NextButton);
 }
 
@@ -28,7 +28,12 @@ Controller.prototype.ComponentSelectionPageCallback = function() {
   var widget = gui.currentPageWidget();
 
   widget.deselectAll();
-  widget.selectComponent("qt.qt5.598.win64_msvc2017_64");
+  widget.selectComponent("qt.qt5.5123.win32_msvc2017");
+  widget.selectComponent("qt.qt5.5123.win64_msvc2017_64");
+
+// Cannot get older version of Qt qit Quick Scripts
+// Cannot programatically select LTS releases
+//  widget.selectComponent("qt.qt5.598.win64_msvc2017_64");
   // widget.selectComponent("qt.55.qt3d");
   // widget.selectComponent("qt.55.qtcanvas3d");
   // widget.selectComponent("qt.55.qtquick1");
