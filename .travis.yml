@@ -55,7 +55,7 @@ matrix:
   - os: windows
     language: cpp
     env:
-      - NMAKE_PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\SDK\ScopeCppSDK\VC\bin
+      - NMAKE_PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\SDK\ScopeCppSDK\VC\bin"
     # before_install:
       # - curl -L http://download.qt-project.org/official_releases/online_installers/qt-unified-windows-x86-online.exe --output qt-installer.exe
       # - ./qt-installer.exe --script ./tools/qt_installer_noninteractive.qs
