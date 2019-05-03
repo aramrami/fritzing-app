@@ -70,5 +70,7 @@ matrix:
       - ls -lah "$NMAKE_PATH"
       - msbuild
       - nmake
+      - find /c | grep nmake
+      - find /c | grep msbuild
       # - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
       # - tools/release_fritzing.bat 0.9.4b 64 2017
