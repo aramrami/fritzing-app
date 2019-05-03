@@ -54,6 +54,8 @@ matrix:
   # Fails. We did not find a good way to install qt and start a developer command prompt yet.
   - os: windows
     language: cpp
+    env:
+      - NMAKE_PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\SDK\ScopeCppSDK\VC\bin
     before_install:
       - pwd
       - curl -L http://download.qt-project.org/official_releases/online_installers/qt-unified-windows-x86-online.exe --output qt-installer.exe
@@ -63,5 +65,8 @@ matrix:
       - (cd src/lib && curl -L https://dl.bintray.com/boostorg/release/1.70.0/source/boost_1_70_0.tar.bz2 | tar xj)
 
     script:
-      - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
-      - tools/release_fritzing.bat 0.9.4b 64 2017
+      - export PATH=$NMAKE_PATH:$PATH
+      - msbuild
+      - nmake
+      # - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+      # - tools/release_fritzing.bat 0.9.4b 64 2017
