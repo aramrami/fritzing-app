@@ -55,7 +55,11 @@ matrix:
   - os: windows
     language: cpp
     env:
-      - NMAKE_PATH="/c/Program Files (x86)/Microsoft Visual Studio/2017/Community/SDK/ScopeCppSDK/VC/bin"
+      - NMAKE_PATH="/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/"
+      # /c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/nmake.exe
+      # /c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe
+      # /c/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/nmake.exe
+      # /c/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.16.27023/bin/Hostx86/x86/nmake.exe
     # before_install:
       # - curl -L http://download.qt-project.org/official_releases/online_installers/qt-unified-windows-x86-online.exe --output qt-installer.exe
       # - ./qt-installer.exe --script ./tools/qt_installer_noninteractive.qs
@@ -65,7 +69,6 @@ matrix:
 
     script:
       - export PATH="$NMAKE_PATH:$PATH"
-      - find /c | grep nmake
-      - find /c | grep msbuild
+      - nmake
       # - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
       # - tools/release_fritzing.bat 0.9.4b 64 2017
