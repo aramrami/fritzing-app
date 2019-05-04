@@ -60,8 +60,8 @@ matrix:
       # /c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe
       # /c/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/nmake.exe
       # /c/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.16.27023/bin/Hostx86/x86/nmake.exe
-      - RC_PATH="/c/Program Files (x86)/Windows Kits/10/bin/x64/rc.exe"
-      # /c/Program Files (x86)/Windows Kits/10/bin/x86/rc.exe
+      - RC_PATH="/c/Program Files (x86)/Windows Kits/10/bin/x64/"
+      # /c/Program Files (x86)/Windows Kits/10/bin/x86/
     before_install:
       - curl -L http://download.qt-project.org/official_releases/online_installers/qt-unified-windows-x86-online.exe --output qt-installer.exe
       - ./qt-installer.exe --script ./tools/qt_installer_noninteractive.qs
