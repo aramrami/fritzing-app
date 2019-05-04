@@ -24,6 +24,8 @@ $Date: 2013-04-19 12:51:22 +0200 (Fr, 19. Apr 2013) $
 
 ********************************************************************/
 
+ intentionally breaking build to verify CI 
+ 
 #include "fapplication.h"
 #include "debugdialog.h"
 #include "utils/misc.h"
