@@ -60,13 +60,14 @@ matrix:
       # /c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe
       # /c/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/nmake.exe
       # /c/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.16.27023/bin/Hostx86/x86/nmake.exe
-    before_install:
-      - curl -L http://download.qt-project.org/official_releases/online_installers/qt-unified-windows-x86-online.exe --output qt-installer.exe
-      - ./qt-installer.exe --script ./tools/qt_installer_noninteractive.qs
-      - curl -fsSL https://github.com/libgit2/libgit2/archive/v0.28.1.zip -o libgit2.zip && 7z x libgit2.zip && mv libgit2-0.28.1 ../libgit2
-      - (mkdir ../libgit2/build64 && cd ../libgit2/build64 && cmake -G "Visual Studio 15 2017 Win64" -D BUILD_SHARED_LIBS=OFF .. && cmake --build .)
-      - (cd src/lib && curl -L https://dl.bintray.com/boostorg/release/1.70.0/source/boost_1_70_0.tar.bz2 | tar xj)
+    # before_install:
+      # - curl -L http://download.qt-project.org/official_releases/online_installers/qt-unified-windows-x86-online.exe --output qt-installer.exe
+      # - ./qt-installer.exe --script ./tools/qt_installer_noninteractive.qs
+      # - curl -fsSL https://github.com/libgit2/libgit2/archive/v0.28.1.zip -o libgit2.zip && 7z x libgit2.zip && mv libgit2-0.28.1 ../libgit2
+      # - (mkdir ../libgit2/build64 && cd ../libgit2/build64 && cmake -G "Visual Studio 15 2017 Win64" -D BUILD_SHARED_LIBS=OFF .. && cmake --build .)
+      # - (cd src/lib && curl -L https://dl.bintray.com/boostorg/release/1.70.0/source/boost_1_70_0.tar.bz2 | tar xj)
 
     script:
       - export PATH="$NMAKE_PATH:$PATH"
-      - tools/release_fritzing.bat 0.9.4b 64 2017
+      - find /c | grep "rc.exe"
+      # - tools/release_fritzing.bat 0.9.4b 64 2017
