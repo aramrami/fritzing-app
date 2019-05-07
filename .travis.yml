@@ -72,4 +72,4 @@ matrix:
     script:
       - export PATH="$NMAKE_PATH:$RC_PATH:$PATH"
       # - tools/release_fritzing.bat 0.9.4b 64 2017
-      - find /c/ | grep -i windows\.h$
+      - find /c/ | grep -i vcvars64\.bat$
